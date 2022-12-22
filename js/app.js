@@ -25,10 +25,10 @@ window.addEventListener("scroll", function () {
         if (section.getBoundingClientRect().top > 0 && section.getBoundingClientRect().top < 250) {
             section.classList.add("your-active-class");
             for (let l = 0; l <= links.length; l++) {
-                if (links[l].textContent === section.getAttribute("data-nav")) {
-                    links[l].classList.add("activated-link");
+                if (links[l]?.innerHTML === section.getAttribute("data-nav")) {
+                    links[l]?.classList.add("activated-link");
                 } else {
-                    links[l].classList.remove("activated-link");
+                    links[l]?.classList.remove("activated-link");
                 }
             }
         } else {
